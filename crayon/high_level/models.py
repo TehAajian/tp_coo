@@ -22,7 +22,7 @@ class SiegeSocial(Local):
     return self.nom
 
 class Usine(Local):
-  nom = models.CharField(max_length=100)
+  machines = models.CharField(max_length=100)
   def __str__(self):
     return self.nom
       

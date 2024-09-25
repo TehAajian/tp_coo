@@ -18,4 +18,10 @@ class Local(models.model):
 
 class Meta:
   abstract = True
-  
+
+models.ForeignKey(
+Departement, # ou "self",
+on_delete=models.PROTECT,
+# blank=True, null=True,
+# related_name="+",
+)

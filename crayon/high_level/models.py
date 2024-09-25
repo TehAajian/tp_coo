@@ -10,3 +10,12 @@ on_delete=models.CASCADE,
 )
 name = models.CharField(max_length=200)
 votes = models.IntegerField(default=0)
+
+class Local(models.model):
+  nom = models.CharField(max_length=100)
+  ville = models.ForeignKey(Ville, on_delete=models.CASCADE)
+  surface = models.IntegerField()
+
+class Meta:
+  abstract = True
+  

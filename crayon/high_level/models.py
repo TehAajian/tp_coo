@@ -47,6 +47,9 @@ class Etape(models.Model):
   etape_suivante = models.CharField(max_length=100)
   def __str__(self):
     return self.nom
+class QuantiteRessource(models.Model):
+  ressource = models.CharField(max_length=100)
+  quantite = models.IntegerField()
 
 class Objet(models.Model):
   nom_Objet = models.CharField(max_length=100)
